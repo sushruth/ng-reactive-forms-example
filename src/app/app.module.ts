@@ -1,18 +1,27 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormDataService } from './services/index';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 import { AppComponent } from './app.component';
+import { ImmigrationFormComponent } from './components/';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ImmigrationFormComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    ReactiveFormsModule,
+    NgbModule.forRoot()
   ],
-  providers: [],
+  providers: [
+    FormDataService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
